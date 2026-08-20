@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+*.whl
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Data and generated artifacts
+data/raw/*
+data/interim/*
+data/processed/*
+artifacts/*
+outputs/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!artifacts/.gitkeep
+
+# Model checkpoints and local exports
+*.pt
+*.pth
+*.ckpt
+*.parquet
+*.xlsx
+*.xls
+
+# Local configuration and credentials
+.env
+.env.*
+*.pem
+*.key
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.tmp
+*.log

@@ -1,0 +1,15 @@
+index,feature_name,encoding,definition,range,scope
+1,x_norm,continuous,2*x/120 - 1,"[-1,1]",node
+2,y_norm,continuous,2*y/80 - 1,"[-1,1]",node
+3,teammate,binary,1 for the actor's team and 0 for an opponent,"{0,1}",node
+4,actor,binary,StatsBomb freeze-frame actor flag,"{0,1}",node
+5,keeper,binary,StatsBomb freeze-frame goalkeeper flag,"{0,1}",node
+6,dx_from_actor,continuous,(x_i - x_actor)/120,"approximately [-1,1]",node
+7,dy_from_actor,continuous,(y_i - y_actor)/80,"approximately [-1,1]",node
+8,distance_from_actor,continuous,"Euclidean distance(i,actor)/120","[0,1.054]",node
+9,angle_from_actor,continuous,"atan2(dy_from_actor,dx_from_actor)/pi","[-1,1]",node
+10,nearest_opponent_distance,continuous,nearest opponent distance/120,"[0,1]",node
+11,pass_corridor_blockers,continuous,opponents within a 2 m actor-node corridor divided by 11,"[0,1]",node
+12,distance_to_attacking_goal,continuous,"distance((x_i,y_i),(120,40))/120","[0,1.054]",node
+13,visible_area_fraction,continuous,visible polygon area divided by (120*80),"[0,1]",shared node feature
+14,actor_index_indicator,binary,1 when node index equals the unique actor index,"{0,1}",node; duplicates feature 4 by construction

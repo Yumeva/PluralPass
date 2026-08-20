@@ -1,0 +1,14 @@
+{
+  "dataset_name": "PluralPass derived open-play passing cohort",
+  "description": "Derived graph records constructed from version-pinned StatsBomb event data and 360 freeze frames.",
+  "sport": "association football",
+  "task": "visible-receiver set prediction, conditional completion, and short-horizon spatial progression",
+  "spatial_progression_target": "maximum same-team progressive-value proxy observed within 10 seconds minus the value at pass origin",
+  "data_type": "event data with single-frame 360 spatial context",
+  "source_repository": "https://github.com/statsbomb/open-data",
+  "source_commit": "b0bc9f22dd77c206ddedc1d742893b3bbe64baec",
+  "raw_data_redistributed": false,
+  "individual_coach_data_included": false,
+  "node_feature_count": 14,
+  "version": "1.0.0"
+}

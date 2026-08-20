@@ -1,0 +1,60 @@
+project:
+  name: pluralpass-ablate-no-visible-area
+  seed: 20260623
+data:
+  upstream_repo: statsbomb/open-data
+  upstream_ref: b0bc9f22dd77c206ddedc1d742893b3bbe64baec
+  raw_dir: data/raw/statsbomb
+  interim_dir: data/interim
+  processed_dir: data/processed
+  manifest_path: data/manifest.json
+  field_length: 120.0
+  field_width: 80.0
+  receiver_match_max_m: 12.0
+  min_visible_teammates: 2
+  min_visible_players_expert: 18
+  short_horizon_seconds: 10.0
+  open_play_patterns:
+  - Regular Play
+  - From Counter
+  excluded_pass_types:
+  - Corner
+  - Free Kick
+  - Goal Kick
+  - Kick Off
+  - Throw-in
+splits:
+  calibration_fraction: 0.15
+  validation_fraction: 0.15
+  group_key: match_id
+model:
+  max_nodes: 22
+  node_features: 14
+  hidden_dim: 96
+  heads: 4
+  layers: 3
+  dropout: 0.15
+  mirror_ensemble: true
+  ensemble_members: 5
+  zero_feature_indices:
+  - 12
+training:
+  epochs: 40
+  batch_size: 128
+  learning_rate: 0.0005
+  weight_decay: 0.0001
+  early_stopping_patience: 7
+  receiver_loss_weight: 1.0
+  completion_loss_weight: 0.5
+  value_loss_weight: 0.5
+conformal:
+  coverage: 0.9
+  max_set_size: null
+  epistemic_abstention_quantile: 0.95
+  minimum_visible_area_fraction: 0.25
+coach_study:
+  target_coaches: 20
+  minimum_coaches: 15
+  scenarios: 40
+  minimum_visible_players: 18
+  seed: 20260701
