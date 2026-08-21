@@ -5,10 +5,18 @@ type: software
 authors:
   - family-names: "Zhao"
     given-names: "Zhipeng"
+    affiliation: "Guangzhou Sport University"
+    orcid: "https://orcid.org/0009-0007-1817-3857"
+  - family-names: "Lai"
+    given-names: "Dongbin"
+    affiliation: "Guangzhou Huali College"
+  - family-names: "Zeng"
+    given-names: "Qin"
+    affiliation: "Guangzhou Sport University"
 repository-code: "https://github.com/Yumeva/PluralPass"
 license: MIT
 version: 1.0.0
-date-released: 2026-08-20
+date-released: 2026-08-21
 keywords:
   - football analytics
   - conformal prediction
