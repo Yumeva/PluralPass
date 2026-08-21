@@ -9,7 +9,11 @@ description = "Calibrated set-valued receiver prediction for partially observed 
 readme = "README.md"
 requires-python = ">=3.12"
 license = { text = "MIT" }
-authors = [{ name = "Zhipeng Zhao" }]
+authors = [
+  { name = "Zhipeng Zhao" },
+  { name = "Dongbin Lai" },
+  { name = "Qin Zeng" },
+]
 keywords = [
   "football analytics",
   "conformal prediction",

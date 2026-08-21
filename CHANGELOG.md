@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0 - 2026-08-20
+## 1.0.0 - 2026-08-21
 
 - Replaced the public placeholder skeleton with the complete installable PluralPass implementation.
 - Pinned StatsBomb Open Data to commit `b0bc9f22dd77c206ddedc1d742893b3bbe64baec`.
